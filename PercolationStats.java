@@ -8,7 +8,7 @@ import edu.princeton.cs.algs4.StdRandom;
 import edu.princeton.cs.algs4.StdStats;
 
 public class PercolationStats {
-    private static double confidenceInterval95 = 1.96;
+    private static double final CONFIDENCE_95 = 1.96;
     private final double tTrials;
     private final double[] thresholdArray;
 
@@ -88,12 +88,12 @@ public class PercolationStats {
 
     // low endpoint of 95% confidence interval
     public double confidenceLo() {
-        return mean() - ((confidenceInterval95 * stddev()) / Math.sqrt(tTrials));
+        return mean() - ((CONFIDENCE_95 = 1.96 * stddev()) / Math.sqrt(tTrials));
     }
 
     // high endpoint of 95% confidence interval
     public double confidenceHi() {
-        return mean() + ((confidenceInterval95 * stddev()) / Math.sqrt(tTrials));
+        return mean() + ((CONFIDENCE_95 = 1.96 * stddev()) / Math.sqrt(tTrials));
     }
 
 
